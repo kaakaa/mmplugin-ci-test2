@@ -14,5 +14,5 @@ var manifestString string
 var Manifest model.Manifest
 
 func init() {
-	_ = json.NewDecoder(strings.NewReader(manifestString)).Decode(&Manifest)
+	err := json.NewDecoder(strings.NewReader(manifestString)).Decode(&Manifest)
 }
